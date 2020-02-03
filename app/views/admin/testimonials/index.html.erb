@@ -1,0 +1,15 @@
+<h1>Testimonials</h1>
+<hr>
+<h5>Create a<%= link_to "new", new_admin_testimonial_path, class: "px-2" %>news article</h5>
+<br>
+<table class="table table-sm">
+  <% @testimonials.each do |testimonial| %>
+    <tr>
+      <td><h5 class="pt-2"><%= testimonial.name %></h5></td>
+      <td><%= link_to "show", admin_testimonial_path(testimonial), class: 'btn btn-primary' %></td>
+      <td><%= link_to "edit", edit_admin_testimonial_path(testimonial), class: 'btn btn-primary' %></td>
+      <td><%= link_to "delete", admin_testimonial_path(testimonial), data: {confirm: "Deleting Testimonial! Are you sure?"}, method: :delete, class: 'btn btn-primary' %></td>
+    </tr>
+  <% end %>
+</table>
+<%= paginate @testimonials %>
