@@ -12,7 +12,7 @@ class Admin::NewsArticlesController < Admin::ApplicationController
   end
 
   def index
-    @news_articles = NewsArticle.order(:name).page(params[:page])
+    @news_articles = NewsArticle.order(:title).page(params[:page])
   end
 
   def create
@@ -45,7 +45,7 @@ class Admin::NewsArticlesController < Admin::ApplicationController
   private
 
   def news_article_params
-    params.require(:news_article).permit(:name, :body, :image)
+    params.require(:news_article).permit(:title, :body, :image)
   end
 
   def find_news_article

@@ -1,7 +1,5 @@
 class Testimonial < ApplicationRecord
-  extend FriendlyId
-  friendly_id :name, use: :slugged
-
-  validates :body, :name, presence: true
+  has_one_attached :image
+  validates :body, :title, presence: true
   paginates_per 5
 end

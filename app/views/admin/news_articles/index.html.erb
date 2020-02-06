@@ -5,7 +5,7 @@
 <table class="table table-sm table-border">
   <% @news_articles.each do |news_article| %>
     <tr>
-      <td><h5 class="pt-2"><%= news_article.name %></h5></td>
+      <td><h5 class="pt-2"><%= news_article.title %></h5></td>
       <td><%= link_to "show", admin_news_article_path(news_article), class: 'btn btn-primary' %></td>
       <td><%= link_to "edit", edit_admin_news_article_path(news_article), class: 'btn btn-primary' %></td>
       <td><%= link_to "delete", admin_news_article_path(news_article), data: {confirm: "Deleting News Article! Are you sure?"}, method: :delete, class: 'btn btn-primary' %></td>
