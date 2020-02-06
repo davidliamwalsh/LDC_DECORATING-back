@@ -1,0 +1,4 @@
+web: bundle exec puma -t 5:5 -p 3001 -e ${RACK_ENV:-development}
+postgres: postgres -D /usr/local/var/postgres
+worker: bundle exec sidekiq -t 30
+redis: redis-server
