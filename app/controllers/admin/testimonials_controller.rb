@@ -12,11 +12,12 @@ class Admin::TestimonialsController < Admin::ApplicationController
   end
 
   def index
-    @testimonials = Testimonial.order(:name).page(params[:page])
+    @testimonials = Testimonial.order(:title).page(params[:page])
   end
 
   def create
     @testimonial = Testimonial.new(testimonial_params)
+    @testimonial.image.attach(testimonial_params[:image])
 
     if @testimonial.save
       redirect_to admin_testimonials_path, status: :found, notice: "Testimonial successfully created!"
@@ -44,7 +45,7 @@ class Admin::TestimonialsController < Admin::ApplicationController
   private
 
   def testimonial_params
-    params.require(:testimonial).permit(:name, :body)
+    params.require(:testimonial).permit(:title, :body, :image)
   end
 
   def find_testimonial

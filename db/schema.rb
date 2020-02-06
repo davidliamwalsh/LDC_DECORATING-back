@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_132532) do
+ActiveRecord::Schema.define(version: 2020_02_06_003723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_02_03_132532) do
   end
 
   create_table "news_articles", force: :cascade do |t|
+<<<<<<< HEAD
     t.string "name", null: false
     t.text "body", null: false
     t.string "slug"
@@ -61,6 +62,19 @@ ActiveRecord::Schema.define(version: 2020_02_03_132532) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
     t.index ["slug"], name: "index_testimonials_on_slug", unique: true
+=======
+    t.string "title", null: false
+    t.string "body", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "body", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+>>>>>>> c605748d367f62f92ed340ac84a11ddafbb895ed
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
