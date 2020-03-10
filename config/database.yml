@@ -24,10 +24,6 @@ test:
   database: ldcdecorating_test
 
 production:
-  adapter: postgresql
-  unicode: unicode
-  database: ldcdecorating_Production
-  host: localhost
-  pool: 5
-  username: ldc_decorating
-  password: <%= ENV['LDCDECORATING_PASSWORD'] %>
+  <<: *default
+  database: ldcdecorating_production
+  password: <%= ENV['DATABASE_URL'] %>
