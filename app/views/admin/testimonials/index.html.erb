@@ -6,7 +6,6 @@
   <% @testimonials.each do |testimonial| %>
     <tr>
       <td><h5 class="pt-2"><%= testimonial.title %></h5></td>
-      <td><%= link_to "show", admin_testimonial_path(testimonial), class: 'btn btn-primary' %></td>
       <td><%= link_to "edit", edit_admin_testimonial_path(testimonial), class: 'btn btn-primary' %></td>
       <td><%= link_to "delete", admin_testimonial_path(testimonial), data: {confirm: "Deleting Testimonial! Are you sure?"}, method: :delete, class: 'btn btn-primary' %></td>
     </tr>
