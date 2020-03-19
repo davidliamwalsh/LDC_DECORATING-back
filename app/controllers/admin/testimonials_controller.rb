@@ -1,11 +1,8 @@
 class Admin::TestimonialsController < Admin::ApplicationController
-  before_action :find_testimonial, only: [:show, :edit, :update, :destroy]
+  before_action :find_testimonial, only: [:edit, :update, :destroy]
 
   def new
     @testimonial = Testimonial.new
-  end
-
-  def show
   end
 
   def edit
