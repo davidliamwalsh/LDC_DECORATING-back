@@ -28,10 +28,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'image_processing', '~> 1.2'
 gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'uglifier', '~> 4.2'
-gem 'foreman', '~> 0.87.0'
 gem 'thor', '~> 1.0', '>= 1.0.1'
-gem 'faker', '~> 2.10', '>= 2.10.1'
-gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
 # gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'gibbon', '~> 3.3', '>= 3.3.2'
 gem 'friendly_id', '~> 5.3'
@@ -50,35 +47,40 @@ gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'rack-attack', '~> 6.2', '>= 6.2.2'
 gem 'kaminari', '~> 1.2'
 gem 'bootstrap4-kaminari-views', '~> 1.0', '>= 1.0.1'
+gem 'rb-readline', '~> 0.5.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :test do
-  gem 'rspec-rails', '~> 3.9'
+  gem 'database_cleaner', '~> 1.7'
+  gem 'webmock', '~> 3.5', '>= 3.5.1'
   gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
-  gem 'webmock', '~> 3.8'
-  gem 'capybara', '~> 3.31'
-  gem 'capybara-screenshot', '~> 1.0', '>= 1.0.24'
-  gem 'database_cleaner', '~> 1.8'
   gem 'rack_session_access', '~> 0.2.0'
-  gem 'wisper-rspec', '~> 1.1'
 end
 
 group :development, :test do
-  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
-  gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'capybara', '~> 3.13', '>= 3.13.2'
+  gem 'selenium-webdriver', '~> 3.141'
+  gem 'factory_bot_rails', '~> 5.0', '>= 5.0.1'
+  gem 'faker', '~> 1.9', '>= 1.9.3'
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+  gem 'oj', '~> 3.7', '>= 3.7.12'
+  gem 'webdrivers', '~> 4.0'
 end
 
+
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'foreman', '~> 0.86.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
