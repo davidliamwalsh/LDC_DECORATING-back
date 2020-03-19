@@ -1,5 +1,7 @@
 <%= form_for [:admin, @news_article] do |f| %>
 
+  <%= render 'shared/form_errors', object: @news_article %>
+
   <div class="form-group">
     <label><h5><%= f.label :title %></h5></label>
     <%= f.text_field :title, required: true, class: "form-control" %>

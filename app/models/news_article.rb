@@ -2,7 +2,12 @@ class NewsArticle < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  has_one_attached :image
   validates :body, :title, presence: true
-  paginates_per 5
+  after_create :send_email_campaign
+  has_one_attached :image
+  paginates_per 10
+
+  def send_email_campaign
+    SendEmailCampaignJob.perform_async
+  end
 end

@@ -1,11 +1,8 @@
 class Admin::NewsArticlesController < Admin::ApplicationController
-  before_action :find_news_article, only: [:show, :edit, :update, :destroy]
+  before_action :find_news_article, only: [:edit, :update, :destroy]
 
   def new
     @news_article = NewsArticle.new
-  end
-
-  def show
   end
 
   def edit
