@@ -23,7 +23,7 @@ module Types
     # /testimonials
 
     field :testimonial, TestimonialType , null: true do
-      description "Find a testimonial by slug"
+      description "Find a news testimonial by slug"
       argument :slug, String, required: true
     end
 
@@ -38,7 +38,7 @@ module Types
     def testimonials
       Testimonial.all
     end
-
+    
     # /users
 
     field :user, UserType , null: true do
@@ -57,6 +57,6 @@ module Types
     def users
       User.all
     end
-    
+
   end
 end

@@ -6,9 +6,9 @@ module Types
     field :title, String, null: false
     field :subtitle, String, null: false
     field :body, String, null: false
-    field :email, null: false
-    field :linkedin, null: false
     field :preview_image, String, null: false
+    field :email, String, null: false
+    field :linedin, String, null: false
     field :slug, String, null: false
 
     def image
