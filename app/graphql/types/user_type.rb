@@ -8,7 +8,7 @@ module Types
     field :body, String, null: false
     field :preview_image, String, null: false
     field :email, String, null: false
-    field :linedin, String, null: false
+    field :linkedin, String, null: false
     field :slug, String, null: false
 
     def image
