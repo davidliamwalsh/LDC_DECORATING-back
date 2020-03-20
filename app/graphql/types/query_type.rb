@@ -39,24 +39,7 @@ module Types
       Testimonial.all
     end
 
-    # /users
-
-    field :user, UserType , null: true do
-      description "Find a user by slug"
-      argument :slug, String, required: true
-    end
-
-    def user(slug:)
-      User.find(slug)
-    end
-
-    field :users, [UserType], null: true do
-      description "Returns an array of all users"
-    end
     
-    def users
-      User.all
-    end
     
   end
 end
