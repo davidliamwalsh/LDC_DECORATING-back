@@ -23,7 +23,7 @@ module Types
     # /testimonials
 
     field :testimonial, TestimonialType , null: true do
-      description "Find a testimonial by slug"
+      description "Find a news article by slug"
       argument :slug, String, required: true
     end
 
@@ -32,14 +32,12 @@ module Types
     end
 
     field :testimonials, [TestimonialType], null: true do
-      description "Returns an array of all testimonials"
+      description "Returns an array of all news articles"
     end
     
     def testimonials
       Testimonial.all
     end
-
-    
     
   end
 end
