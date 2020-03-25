@@ -32,8 +32,8 @@ class SendEmailCampaign
 
   def settings
     {
-      subject_line: "New News from LDC Decorating Contractors",
-      title: "New News Article",
+      subject_line: "New Alert from LDC Decorating Contractors",
+      title: "New Alert from LDC Decorating Contractors",
       from_name: "LDC Decorating Contractors",
       reply_to: "ldcdecoratingcontractors@davidwalsh.co.uk",
       template_id: 129562
