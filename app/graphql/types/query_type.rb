@@ -58,5 +58,24 @@ module Types
       User.all
     end
 
+    # /careers
+
+    field :careers_item, CareersItemType , null: true do
+      description "Find a careers item by slug"
+      argument :slug, String, required: true
+    end
+
+    def careers_item(slug:)
+      CareersItem.find(slug)
+    end
+
+    field :careers_items, [CareersItemType], null: true do
+      description "Returns an array of all careers items"
+    end
+    
+    def careers_items
+      CareersItem.all
+    end
+
   end
 end

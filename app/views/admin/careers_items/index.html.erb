@@ -1,0 +1,14 @@
+<h1>Careers Items</h1>
+<hr>
+<h5>Create a<%= link_to "new", new_admin_careers_item_path, class: "px-2" %>Careers Item</h5>
+<br>
+<table class="table table-sm table-border">
+  <% @careers_items.each do |careers_item| %>
+    <tr>
+      <td><h5 class="pt-2"><%= careers_item.title %></h5></td>
+      <td><%= link_to "edit", edit_admin_careers_item_path(careers_item), class: 'btn btn-primary' %></td>
+      <td><%= link_to "delete", admin_careers_item_path(careers_item), data: {confirm: "Deleting Careers Item! Are you sure?"}, method: :delete, class: 'btn btn-primary' %></td>
+    </tr>
+  <% end %>
+</table>
+<%= paginate @careers_items %>
