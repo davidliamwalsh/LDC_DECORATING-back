@@ -1,0 +1,14 @@
+<h1>Decorator Users</h1>
+<hr>
+<h5>Create a<%= link_to "new", new_admin_decorator_path, class: "px-2" %>decorator user</h5>
+<br>
+<table class="table table-sm">
+  <% @decorators.each do |decorator| %>
+    <tr>
+      <td><h5 class="pt-2"><%= decorator.title %></h5></td>
+      <td><%= link_to "edit", edit_admin_decorator_path(decorator), class: 'btn btn-primary' %></td>
+      <td><%= link_to "delete", admin_decorator_path(decorator), data: {confirm: "Deleting Decorator User! Are you sure?"}, method: :delete, class: 'btn btn-primary' %></td>
+    </tr>
+  <% end %>
+</table>
+<%= paginate @decorators %>
