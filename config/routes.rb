@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     resources :news_articles
     resources :testimonials
     resources :users
-    resources :decorators
     resources :careers_items
   end
 end

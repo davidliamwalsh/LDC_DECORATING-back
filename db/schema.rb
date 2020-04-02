@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_034702) do
+ActiveRecord::Schema.define(version: 2020_04_01_204630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,16 +46,6 @@ ActiveRecord::Schema.define(version: 2020_04_02_034702) do
     t.string "language", null: false
     t.string "slug"
     t.index ["slug"], name: "index_careers_items_on_slug", unique: true
-  end
-
-  create_table "decorators", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "subtitle", null: false
-    t.string "body", null: false
-    t.string "email", null: false
-    t.string "linkedin", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_decorators_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
