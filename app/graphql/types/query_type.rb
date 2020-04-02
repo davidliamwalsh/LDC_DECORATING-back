@@ -58,6 +58,25 @@ module Types
       User.all
     end
 
+    # /decorators
+
+    field :decorator, DecoratorType , null: true do
+      description "Find a decorator by slug"
+      argument :slug, String, required: true
+    end
+
+    def decorator(slug:)
+      Decorator.find(slug)
+    end
+
+    field :decorators, [UserType], null: true do
+      description "Returns an array of all decorators"
+    end
+    
+    def decorators
+      Decorator.all
+    end
+
     # /careers
 
     field :careers_item, CareersItemType , null: true do
