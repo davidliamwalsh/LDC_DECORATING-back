@@ -21,9 +21,16 @@ body {
 .navbar {
   a {
     color: #E5D9C1;
+    font-size: 3vh;
   }
   a:hover {
     color: #fff;
+  }
+
+  .navbar-brand {
+    a {
+      font-size: 4vh;
+    }
   }
 }
 
@@ -46,7 +53,7 @@ a:hover {
   color: #E5D9C1;
 }
 
-.container {
+.c-container {
   margin-top: 2em;
   
   hr {
@@ -70,4 +77,53 @@ textarea,
 label {
   margin: 0;
   padding: 0;
+}
+
+// add style for mobile and tablet view
+
+.btn {
+  font-size: 3vh;
+  margin-right: .5em;
+}
+
+.btn-home {
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 5vh;
+}
+
+h5 {
+  font-size: 3vh;
+}
+
+input {
+  font-size: 2.5vh;
+}
+
+.form-control {
+  font-size: 2.5vh;
+}
+
+.navbar-toggler {
+  font-size: 3vh;
+}
+
+.c-container {
+  margin: 0 auto;
+  padding: 2em .5em;
+  width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+  .c-container {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .c-container {
+    max-width: 1000px;
+  }
 }
