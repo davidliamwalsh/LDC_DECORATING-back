@@ -1,9 +1,9 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe SendEmailCampaign do
-  include MailchimpHelper
-
-  describe "Creating a Mailchimp campaign" do
-   
+  describe "Sending a mailchimp campaign", type: :request do
+    before do
+      
+    end
   end
 end
